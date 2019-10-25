@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>
+      ESHiSAN
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/8e318f4f9e.js"></script>
+    <script type="text/javascript">
+      window.onscroll=function(){
+        if(window.pageYOffset<window.outerHeight){
+          $('#menu-frame').hide(200);
+        }else{
+          $('#menu-frame').show(200);
+        }
+      }
+      function moveTo(id){
+        var elm=document.getElementById(id);
+        var y=elm.getBoundingClientRect().top;
+        $('body,html').animate({scrollTop:y+window.pageYOffset}, 800, 'swing');
+      }
+      function imageClicked(e){
+        e.requestFullscreen();
+      }
+    </script>
+  </head>
+
+  <body>
+    <div class="menu-frame"id="menu-frame">
+      <div title="ページ一番上に移動"><i class="fas fa-arrow-up" onclick="moveTo('top')"></i></div>
+      <div title="ページを閉じる"><i class="fas fa-times" onclick="window.close()"></i></div>
+
+    </div>
+
+    <div class="home-frame" id="top">
+      <div class="home-frame__contents">
+        <h1>ESHiSAN</h1>
+          <p>イラスト展示Webサイト試作品でございます。
+            <br>ただいま開発中でございます。
+            <br>以下の部員の作品を掲載しております。クリックでその場所までご案内します。
+          </p>
+          <ul>
+            <li onclick="moveTo('Mya-Mya')">みゃ</li>
+            <li onclick="moveTo('RantarantaPiya')">ランタランタぴーや</li>
+          </ul>
+      </div>
+    </div>
+
+    <div class="indv-frame" id="Mya-Mya">
+      <h1>Mya-Mya(54213213165465年生)</h1>
+      <p>こんなに長く生きてちゃあ色々なことがあったけど・・・とりあえずこの人生で私が出会った素晴らしい写真を見てもらおうじゃないか</p>
+
+      <h2>カラーバー</h2>
+      <p>朝早くに目が覚めてしまってテレビを点けたらあらびっくり！こんな画面が！！
+        テレビの画質調整にピッタリですな！いやぁ素晴らしい・・・・</p>
+      <div class="indv-frame__imgholder">
+        <img src="img1.png"onclick="imageClicked(this)">
+      </div>
+
+      <h2>生田緑地の井戸</h2>
+      <p>この前10kmくらいお散歩したんだけどー、その途中で井戸見つけたwww 一般開放されてるって結構珍しくない？？wwwww
+      飲めないらしいんだけどw、ご自由にお使い下さいって書いてあったから漕いでみたーーwwwwww そしたら出なかったーーーーwwwwwww</p>
+      <div class="indv-frame__imgholder">
+        <img src="img2.jpg"onclick="imageClicked(this)">
+      </div>
+    </div>
+
+    <div class="indv-frame" id="RantarantaPiya">
+      <h1>ランタランタぴーや(3.141592年生)</h1>
+      <p>うーん・・・思いつかないw！</p>
+
+      <h2>青い空</h2>
+      <p>さてあなたはこの画像が本当に青い空を写したものかペイントで全画面を青く塗りつぶしたものかどちらか分かるか？</p>
+      <div class="indv-frame__imgholder">
+        <img src="img3.png"onclick="imageClicked(this)">
+      </div>
+    </div>
+
+  </body>
+</html>

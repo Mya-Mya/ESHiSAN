@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/8e318f4f9e.js"></script>
+    <script>
+      $('body,html').on('keyup',function(e){
+        if(e.keyCode==27){
+          window.location.href='index.html';
+        }
+      })
+    </script>
+  </head>
+  <body>
+    <div class="home-frame" id="top">
+      <div class="home-frame__contents">
+        <h1>ESCを押してページへ移動</h1>
+      </div>
+      <p>部員の作品は全画面でご覧頂けますが、全画面を終了するにはESCキーを押します。</p>
+    </div>
+  </body>
+</html>
